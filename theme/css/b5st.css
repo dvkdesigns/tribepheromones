@@ -1,6 +1,23 @@
 /*!
  * b5st since v1.0 | Unicence
  */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing:2px;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.home h1 {
+  font-size: 55px;
+}
+h2 {
+  margin-bottom: 30px;
+}
+
 .site-header-image {
   display: block;
   margin: auto; }
@@ -290,3 +307,11 @@ body {
 
 main {
   flex: 1 0 auto; }
+
+  .banner-wapper {background-color:aquamarine;}
+
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { text-align:center; margin-bottom: 0; }
+
+  .woocommerce ul.products li.product .price {display: none;}
+  .woocommerce ul.products li.product a {margin: 0 5px;}
+  .related.products {display:none;}

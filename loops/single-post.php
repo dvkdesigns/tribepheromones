@@ -3,7 +3,7 @@
  * The Single Post
  */
 ?>
-
+hello
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
   <article role="article" id="post_<?php the_ID()?>" <?php post_class("entry-content")?>>
     <header class="wrap-lg my-5 entry-header">

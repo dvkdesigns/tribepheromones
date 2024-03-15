@@ -12,34 +12,39 @@
 <a class="visually-hidden-focusable d-inline-block p-1" href="#site-main">Skip to main content</a>
 
 <?php b5st_navbar_before();?>
+<div class="container-fluid px-5">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <h3 class="mb-0">Tribe Pheromones</h3>
+      </a>
 
-<nav id="site-navbar" class="border-bottom navbar navbar-expand-md navbar-light bg-light">
-  <div class="container-xxl">
+      <nav id="site-navbar" class="navbar navbar-expand-md ">
+        <div class="container-xxl">
 
-    <?php b5st_navbar_brand();?>
+          
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <?php
-        wp_nav_menu( array(
-          'theme_location'  => 'navbar',
-          'container'       => false,
-          'menu_class'      => '',
-          'fallback_cb'     => '__return_false',
-          'items_wrap'      => '<ul id="%1$s" class="navbar-nav ms-auto %2$s">%3$s</ul>',
-          'depth'           => 2,
-          'walker'          => new b5st_walker_nav_menu()
-        ) );
-      ?>
 
-      <?php b5st_navbar_search();?>    
-    </div>
 
+        </div>
+      </nav>
+
+      <div class="col-md-3 text-end">
+      <?php if (is_user_logged_in()) { ?>
+          <a href="<?php echo wp_logout_url(); ?>">Logout</a>
+      <?php } else { ?>
+          <a href="<?php echo wp_login_url(get_permalink()); ?>">Login</a>
+      <?php } ?>
+
+        <i class="bi bi-cart3"></i>
+
+      </div>
+    </header>
   </div>
-</nav>
+
   
 </div>
 
